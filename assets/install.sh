@@ -28,6 +28,7 @@ EOF
 chmod +x /opt/postfix.sh
 postconf -e myhostname=$maildomain
 postconf -F '*/*/chroot = n'
+postconf -e relay_domains=$relay_domains
 
 ############
 # SASL SUPPORT FOR CLIENTS
